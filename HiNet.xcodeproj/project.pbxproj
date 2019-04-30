@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */; };
+		D039B3C42278253900901ACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C32278253900901ACC /* AppDelegate.m */; };
+		D039B3C72278253900901ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C62278253900901ACC /* ViewController.m */; };
+		D039B3CA2278253900901ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3C82278253900901ACC /* Main.storyboard */; };
+		D039B3CC2278253D00901ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D039B3CB2278253D00901ACC /* Assets.xcassets */; };
+		D039B3CF2278253D00901ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3CD2278253D00901ACC /* LaunchScreen.storyboard */; };
+		D039B3D22278253D00901ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3D12278253D00901ACC /* main.m */; };
+		D039B3DB2278257D00901ACC /* HiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3DA2278257D00901ACC /* HiNetManager.m */; };
+		D039B3E1227825EC00901ACC /* HiNetConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E0227825EC00901ACC /* HiNetConfiguration.m */; };
+		D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */; };
+		D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */; };
+		D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E92278311B00901ACC /* HiNetRequest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0E7C265AA5B7E025F744ED /* Pods-HiNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.release.xcconfig"; sourceTree = "<group>"; };
+		A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.debug.xcconfig"; sourceTree = "<group>"; };
+		D039B3BF2278253900901ACC /* HiNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D039B3C22278253900901ACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D039B3C32278253900901ACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D039B3C52278253900901ACC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D039B3C62278253900901ACC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D039B3C92278253900901ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D039B3CB2278253D00901ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D039B3CE2278253D00901ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D039B3D02278253D00901ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D039B3D12278253D00901ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D039B3D92278257D00901ACC /* HiNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetManager.h; sourceTree = "<group>"; };
+		D039B3DA2278257D00901ACC /* HiNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetManager.m; sourceTree = "<group>"; };
+		D039B3DF227825EC00901ACC /* HiNetConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetConfiguration.h; sourceTree = "<group>"; };
+		D039B3E0227825EC00901ACC /* HiNetConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetConfiguration.m; sourceTree = "<group>"; };
+		D039B3E22278298C00901ACC /* HiNetURLSessionExchanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetURLSessionExchanger.h; sourceTree = "<group>"; };
+		D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetURLSessionExchanger.m; sourceTree = "<group>"; };
+		D039B3E5227829B100901ACC /* HiNetURLConnectionExchanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetURLConnectionExchanger.h; sourceTree = "<group>"; };
+		D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetURLConnectionExchanger.m; sourceTree = "<group>"; };
+		D039B3E82278311B00901ACC /* HiNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetRequest.h; sourceTree = "<group>"; };
+		D039B3E92278311B00901ACC /* HiNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetRequest.m; sourceTree = "<group>"; };
+		D039B3F222784AC800901ACC /* HiNetJsonable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetJsonable.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D039B3BC2278253900901ACC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87392F46A1EA3C3228995A12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA8C4864BAC691AEB6DF2067 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */,
+				7F0E7C265AA5B7E025F744ED /* Pods-HiNet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D039B3B62278253900901ACC = {
+			isa = PBXGroup;
+			children = (
+				D039B3C12278253900901ACC /* HiNet */,
+				D039B3C02278253900901ACC /* Products */,
+				BA8C4864BAC691AEB6DF2067 /* Pods */,
+				87392F46A1EA3C3228995A12 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D039B3C02278253900901ACC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D039B3BF2278253900901ACC /* HiNet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D039B3C12278253900901ACC /* HiNet */ = {
+			isa = PBXGroup;
+			children = (
+				D039B3D82278254400901ACC /* Source */,
+				D039B3C22278253900901ACC /* AppDelegate.h */,
+				D039B3C32278253900901ACC /* AppDelegate.m */,
+				D039B3C52278253900901ACC /* ViewController.h */,
+				D039B3C62278253900901ACC /* ViewController.m */,
+				D039B3C82278253900901ACC /* Main.storyboard */,
+				D039B3CB2278253D00901ACC /* Assets.xcassets */,
+				D039B3CD2278253D00901ACC /* LaunchScreen.storyboard */,
+				D039B3D02278253D00901ACC /* Info.plist */,
+				D039B3D12278253D00901ACC /* main.m */,
+			);
+			path = HiNet;
+			sourceTree = "<group>";
+		};
+		D039B3D82278254400901ACC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D039B3D92278257D00901ACC /* HiNetManager.h */,
+				D039B3DA2278257D00901ACC /* HiNetManager.m */,
+				D039B3DF227825EC00901ACC /* HiNetConfiguration.h */,
+				D039B3E0227825EC00901ACC /* HiNetConfiguration.m */,
+				D039B3E22278298C00901ACC /* HiNetURLSessionExchanger.h */,
+				D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */,
+				D039B3E5227829B100901ACC /* HiNetURLConnectionExchanger.h */,
+				D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */,
+				D039B3E82278311B00901ACC /* HiNetRequest.h */,
+				D039B3E92278311B00901ACC /* HiNetRequest.m */,
+				D039B3F222784AC800901ACC /* HiNetJsonable.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D039B3BE2278253900901ACC /* HiNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D039B3D52278253D00901ACC /* Build configuration list for PBXNativeTarget "HiNet" */;
+			buildPhases = (
+				90BB92E050811CAB817EBDCD /* [CP] Check Pods Manifest.lock */,
+				D039B3BB2278253900901ACC /* Sources */,
+				D039B3BC2278253900901ACC /* Frameworks */,
+				D039B3BD2278253900901ACC /* Resources */,
+				676DD00854B2F7867AEBB3F6 /* [CP] Embed Pods Frameworks */,
+				D1FD598DF1D6E1E1D2CDC282 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HiNet;
+			productName = HiNet;
+			productReference = D039B3BF2278253900901ACC /* HiNet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D039B3B72278253900901ACC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Peter;
+				TargetAttributes = {
+					D039B3BE2278253900901ACC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D039B3BA2278253900901ACC /* Build configuration list for PBXProject "HiNet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D039B3B62278253900901ACC;
+			productRefGroup = D039B3C02278253900901ACC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D039B3BE2278253900901ACC /* HiNet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D039B3BD2278253900901ACC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D039B3CF2278253D00901ACC /* LaunchScreen.storyboard in Resources */,
+				D039B3CC2278253D00901ACC /* Assets.xcassets in Resources */,
+				D039B3CA2278253900901ACC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		676DD00854B2F7867AEBB3F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90BB92E050811CAB817EBDCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HiNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FD598DF1D6E1E1D2CDC282 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D039B3BB2278253900901ACC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D039B3DB2278257D00901ACC /* HiNetManager.m in Sources */,
+				D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */,
+				D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */,
+				D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */,
+				D039B3C72278253900901ACC /* ViewController.m in Sources */,
+				D039B3E1227825EC00901ACC /* HiNetConfiguration.m in Sources */,
+				D039B3D22278253D00901ACC /* main.m in Sources */,
+				D039B3C42278253900901ACC /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D039B3C82278253900901ACC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D039B3C92278253900901ACC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D039B3CD2278253D00901ACC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D039B3CE2278253D00901ACC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D039B3D32278253D00901ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D039B3D42278253D00901ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D039B3D62278253D00901ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HiNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jinxuebin.HiNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D039B3D72278253D00901ACC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0E7C265AA5B7E025F744ED /* Pods-HiNet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HiNet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.jinxuebin.HiNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D039B3BA2278253900901ACC /* Build configuration list for PBXProject "HiNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D039B3D32278253D00901ACC /* Debug */,
+				D039B3D42278253D00901ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D039B3D52278253D00901ACC /* Build configuration list for PBXNativeTarget "HiNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D039B3D62278253D00901ACC /* Debug */,
+				D039B3D72278253D00901ACC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D039B3B72278253900901ACC /* Project object */;
+}
