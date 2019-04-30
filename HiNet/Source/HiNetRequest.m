@@ -10,6 +10,24 @@
 
 @implementation HiNetRequest
 
+- (double)takeTime {
+    double end = [self.endDate timeIntervalSince1970] * 1000;
+    double start = [self.startDate timeIntervalSince1970] * 1000;
+    return end - start;
+}
+
+- (NSString *)start {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    return [formatter stringFromDate:self.startDate];
+}
+
+- (NSString *)end {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    return [formatter stringFromDate:self.endDate];
+}
+
 - (instancetype)initWithJSON:(id)json {
     self = [super init];
     

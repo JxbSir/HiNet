@@ -10,6 +10,7 @@
 #import "HiNetURLSessionExchanger.h"
 #import "HiNetURLConnectionExchanger.h"
 #import "HiNetRequest.h"
+#import "HiNetListModel.h"
 
 #import <GCDWebServer/GCDWebServer.h>
 #import <GCDWebServer/GCDWebServerDataResponse.h>
@@ -19,7 +20,8 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
 @interface HiNetManager ()<HiNetURLSessionExchangerDelegate, HiNetURLConnectionExchangerDelegate>
 @property (nonatomic, strong) HiNetURLSessionExchanger* sessionExchanger;
 @property (nonatomic, strong) HiNetURLConnectionExchanger* connectionExchanger;
-
+@property (nonatomic, strong) GCDWebServer* server;
+    
 @property (nonatomic, strong) NSMutableDictionary* executingTasks;
 @end
 
@@ -49,24 +51,116 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
 }
 
 - (void)start {
-    GCDWebServer* server = [[GCDWebServer alloc] init];
-    [server addDefaultHandlerForMethod:@"GET" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
-        return [GCDWebServerDataResponse responseWithHTML:@"<html><body><p>Hello World</p></body></html>"];
-    }];
-    [server addHandlerForMethod:@"GET" path:@"/network" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
-        
-        
-        NSArray* tasks = [[NSUserDefaults standardUserDefaults] arrayForKey:kNetworkTaskList];
-        if (tasks && tasks.count > 0) {
-            return [GCDWebServerDataResponse responseWithHTML:tasks.firstObject];
-        } else {
-            return [GCDWebServerDataResponse responseWithHTML:@"<html><body><p>Hello World</p></body></html>"];
-        }
-
-    }];
-    [server start];
+    _server = [[GCDWebServer alloc] init];
+    
+    [self addIndexHandler];
+    [self addNetworkDataHandler];
+    [self addResouceHandler];
+    
+    [_server start];
 }
 
+- (void)addNetworkDataHandler {
+    [_server addHandlerForMethod:@"GET" path:@"/network/list" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
+        
+        NSString* page = [request.query objectForKey:@"page"];
+        NSString* limit = [request.query objectForKey:@"limit"];
+        
+        HiNetListModel* model = [[HiNetListModel alloc] init];
+        model.code = 0;
+        
+        if (!page || !limit) {
+            model.count = 0;
+            model.data = @[];
+        } else {
+            NSArray* list = [[NSUserDefaults standardUserDefaults] arrayForKey:kNetworkTaskList];
+            if (!list || list.count == 0) {
+                model.count = 0;
+                model.data = @[];
+            } else {
+                model.count = list.count;
+                NSInteger start = (page.integerValue - 1) * limit.integerValue;
+                NSInteger end = start + limit.integerValue;
+                end = MIN(end, list.count - 1);
+                NSArray* pageList = [list subarrayWithRange:NSMakeRange(start, end - start + 1)];
+                __block NSMutableArray* array = [NSMutableArray array];
+                [pageList enumerateObjectsUsingBlock:^(NSString*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    NSError* error;
+                    NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:[obj dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+                    
+                    if (!error) {
+                        HiNetRequest* req = [[HiNetRequest alloc] initWithJSON:dic];
+                        
+                        HiNetworkModel* network = [[HiNetworkModel alloc] init];
+                        network.name = req.url.absoluteString;
+                        network.method = req.requestMethod;
+                        network.type = req.responseHeaders[@"Content-Type"];
+                        network.size = req.responseHeaders[@"Content-Length"];
+                        network.status = req.statusCode;
+                        network.time = [NSString stringWithFormat:@"%.3fms", [req takeTime]];
+                        network.start = [req start];
+                        network.end = [req end];
+                        [array addObject:network];
+                    }
+                    
+                }];
+
+                model.data = array;
+            }
+        }
+ 
+        return [GCDWebServerDataResponse responseWithJSONObject:[model toJSON]];
+    }];
+}
+
+- (void)addIndexHandler {
+    [_server addDefaultHandlerForMethod:@"GET" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"network" ofType:@"html"];
+        NSError* error;
+        NSString* html = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+        return [GCDWebServerDataResponse responseWithHTML:html];
+    }];
+}
+    
+
+- (void)addResouceHandler {
+    [self addHandler:@"/layui/css/layui.css"];
+    [self addHandler:@"/layui/css/layui.mobile.css"];
+    [self addHandler:@"/layui/css/modules/code.css"];
+    [self addHandler:@"/layui/css/modules/layer/default/layer.css"];
+    [self addHandler:@"/layui/css/modules/layerdate/default/laydate.css"];
+    [self addHandler:@"/layui/layui.js"];
+    [self addHandler:@"/layui/lay/modules/table.js"];
+    [self addHandler:@"/layui/lay/modules/laytpl.js"];
+    [self addHandler:@"/layui/lay/modules/laypage.js"];
+    [self addHandler:@"/layui/lay/modules/layer.js"];
+    [self addHandler:@"/layui/lay/modules/jquery.js"];
+    [self addHandler:@"/layui/lay/modules/form.js"];
+    [self addHandler:@"/layui/lay/modules/carousel.js"];
+    [self addHandler:@"/layui/lay/modules/code.js"];
+    [self addHandler:@"/layui/lay/modules/colorpicker.js"];
+    [self addHandler:@"/layui/lay/modules/element.js"];
+    [self addHandler:@"/layui/lay/modules/laydate.js"];
+    [self addHandler:@"/layui/lay/modules/layedit.js"];
+    [self addHandler:@"/layui/lay/modules/mobile.js"];
+    [self addHandler:@"/layui/lay/modules/rate.js"];
+    [self addHandler:@"/layui/lay/modules/slider.js"];
+    [self addHandler:@"/layui/lay/modules/tree.js"];
+    [self addHandler:@"/layui/lay/modules/upload.js"];
+    [self addHandler:@"/layui/lay/modules/util.js"];
+}
+    
+- (void)addHandler:(NSString *)path {
+    NSArray* arr = [path pathComponents];
+    NSString* ext = [path pathExtension];
+    NSString* name = [arr.lastObject stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@".%@",ext] withString:@""];
+    [_server addHandlerForMethod:@"GET" path:path requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
+        NSString* path = [[NSBundle mainBundle] pathForResource:name ofType:ext];
+        NSError* error;
+        NSString* css = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+        return [GCDWebServerDataResponse responseWithHTML:css];
+    }];
+}
 
 - (void)saveTask:(HiNetRequest *)req {
     NSError *error;
@@ -85,8 +179,9 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
         _tasks = [NSMutableArray arrayWithArray:tasks];
     }
     
-    [_tasks addObject:taskString];
+    [_tasks insertObject:taskString atIndex:0];
     [[NSUserDefaults standardUserDefaults] setObject:_tasks forKey:kNetworkTaskList];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark - HiNetURLSessionExchangerDelegate

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */; };
+		D0379A60227898F50068F5C2 /* HiNetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0379A5F227898F50068F5C2 /* HiNetListModel.m */; };
 		D039B3C42278253900901ACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C32278253900901ACC /* AppDelegate.m */; };
 		D039B3C72278253900901ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C62278253900901ACC /* ViewController.m */; };
 		D039B3CA2278253900901ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3C82278253900901ACC /* Main.storyboard */; };
@@ -19,12 +20,46 @@
 		D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */; };
 		D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */; };
 		D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E92278311B00901ACC /* HiNetRequest.m */; };
+		D07D30752278855100D7094D /* network.html in Resources */ = {isa = PBXBuildFile; fileRef = D07D30742278855100D7094D /* network.html */; };
+		D07D309E227891A900D7094D /* layui.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3077227891A900D7094D /* layui.js */; };
+		D07D309F227891A900D7094D /* layui.mobile.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3079227891A900D7094D /* layui.mobile.css */; };
+		D07D30A0227891A900D7094D /* layui.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D307A227891A900D7094D /* layui.css */; };
+		D07D30A1227891A900D7094D /* code.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D307C227891A900D7094D /* code.css */; };
+		D07D30A2227891A900D7094D /* icon-ext.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D307F227891A900D7094D /* icon-ext.png */; };
+		D07D30A3227891A900D7094D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D3080227891A900D7094D /* icon.png */; };
+		D07D30A4227891A900D7094D /* loading-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3081227891A900D7094D /* loading-2.gif */; };
+		D07D30A5227891A900D7094D /* loading-0.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3082227891A900D7094D /* loading-0.gif */; };
+		D07D30A6227891A900D7094D /* loading-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3083227891A900D7094D /* loading-1.gif */; };
+		D07D30A7227891A900D7094D /* layer.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3084227891A900D7094D /* layer.css */; };
+		D07D30A8227891A900D7094D /* laydate.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3087227891A900D7094D /* laydate.css */; };
+		D07D30A9227891A900D7094D /* layui.all.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3088227891A900D7094D /* layui.all.js */; };
+		D07D30AA227891A900D7094D /* mobile.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308B227891A900D7094D /* mobile.js */; };
+		D07D30AB227891A900D7094D /* rate.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308C227891A900D7094D /* rate.js */; };
+		D07D30AC227891A900D7094D /* util.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308D227891A900D7094D /* util.js */; };
+		D07D30AD227891A900D7094D /* element.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308E227891A900D7094D /* element.js */; };
+		D07D30AE227891A900D7094D /* flow.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308F227891A900D7094D /* flow.js */; };
+		D07D30AF227891A900D7094D /* code.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3090227891A900D7094D /* code.js */; };
+		D07D30B0227891A900D7094D /* tree.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3091227891A900D7094D /* tree.js */; };
+		D07D30B1227891A900D7094D /* laydate.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3092227891A900D7094D /* laydate.js */; };
+		D07D30B2227891A900D7094D /* upload.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3093227891A900D7094D /* upload.js */; };
+		D07D30B3227891A900D7094D /* colorpicker.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3094227891A900D7094D /* colorpicker.js */; };
+		D07D30B4227891A900D7094D /* table.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3095227891A900D7094D /* table.js */; };
+		D07D30B5227891A900D7094D /* carousel.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3096227891A900D7094D /* carousel.js */; };
+		D07D30B6227891A900D7094D /* form.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3097227891A900D7094D /* form.js */; };
+		D07D30B7227891A900D7094D /* slider.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3098227891A900D7094D /* slider.js */; };
+		D07D30B8227891A900D7094D /* laypage.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3099227891A900D7094D /* laypage.js */; };
+		D07D30B9227891A900D7094D /* layedit.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309A227891A900D7094D /* layedit.js */; };
+		D07D30BA227891A900D7094D /* layer.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309B227891A900D7094D /* layer.js */; };
+		D07D30BB227891A900D7094D /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309C227891A900D7094D /* jquery.js */; };
+		D07D30BC227891A900D7094D /* laytpl.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309D227891A900D7094D /* laytpl.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E7C265AA5B7E025F744ED /* Pods-HiNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.release.xcconfig"; sourceTree = "<group>"; };
 		A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.debug.xcconfig"; sourceTree = "<group>"; };
+		D0379A5E227898F50068F5C2 /* HiNetListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetListModel.h; sourceTree = "<group>"; };
+		D0379A5F227898F50068F5C2 /* HiNetListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetListModel.m; sourceTree = "<group>"; };
 		D039B3BF2278253900901ACC /* HiNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D039B3C22278253900901ACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D039B3C32278253900901ACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,6 +81,38 @@
 		D039B3E82278311B00901ACC /* HiNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetRequest.h; sourceTree = "<group>"; };
 		D039B3E92278311B00901ACC /* HiNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetRequest.m; sourceTree = "<group>"; };
 		D039B3F222784AC800901ACC /* HiNetJsonable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetJsonable.h; sourceTree = "<group>"; };
+		D07D30742278855100D7094D /* network.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = network.html; sourceTree = "<group>"; };
+		D07D3077227891A900D7094D /* layui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layui.js; sourceTree = "<group>"; };
+		D07D3079227891A900D7094D /* layui.mobile.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layui.mobile.css; sourceTree = "<group>"; };
+		D07D307A227891A900D7094D /* layui.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layui.css; sourceTree = "<group>"; };
+		D07D307C227891A900D7094D /* code.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = code.css; sourceTree = "<group>"; };
+		D07D307F227891A900D7094D /* icon-ext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ext.png"; sourceTree = "<group>"; };
+		D07D3080227891A900D7094D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		D07D3081227891A900D7094D /* loading-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-2.gif"; sourceTree = "<group>"; };
+		D07D3082227891A900D7094D /* loading-0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-0.gif"; sourceTree = "<group>"; };
+		D07D3083227891A900D7094D /* loading-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-1.gif"; sourceTree = "<group>"; };
+		D07D3084227891A900D7094D /* layer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layer.css; sourceTree = "<group>"; };
+		D07D3087227891A900D7094D /* laydate.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = laydate.css; sourceTree = "<group>"; };
+		D07D3088227891A900D7094D /* layui.all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layui.all.js; sourceTree = "<group>"; };
+		D07D308B227891A900D7094D /* mobile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mobile.js; sourceTree = "<group>"; };
+		D07D308C227891A900D7094D /* rate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rate.js; sourceTree = "<group>"; };
+		D07D308D227891A900D7094D /* util.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = util.js; sourceTree = "<group>"; };
+		D07D308E227891A900D7094D /* element.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = element.js; sourceTree = "<group>"; };
+		D07D308F227891A900D7094D /* flow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = flow.js; sourceTree = "<group>"; };
+		D07D3090227891A900D7094D /* code.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = code.js; sourceTree = "<group>"; };
+		D07D3091227891A900D7094D /* tree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tree.js; sourceTree = "<group>"; };
+		D07D3092227891A900D7094D /* laydate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laydate.js; sourceTree = "<group>"; };
+		D07D3093227891A900D7094D /* upload.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = upload.js; sourceTree = "<group>"; };
+		D07D3094227891A900D7094D /* colorpicker.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = colorpicker.js; sourceTree = "<group>"; };
+		D07D3095227891A900D7094D /* table.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = table.js; sourceTree = "<group>"; };
+		D07D3096227891A900D7094D /* carousel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = carousel.js; sourceTree = "<group>"; };
+		D07D3097227891A900D7094D /* form.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = form.js; sourceTree = "<group>"; };
+		D07D3098227891A900D7094D /* slider.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = slider.js; sourceTree = "<group>"; };
+		D07D3099227891A900D7094D /* laypage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laypage.js; sourceTree = "<group>"; };
+		D07D309A227891A900D7094D /* layedit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layedit.js; sourceTree = "<group>"; };
+		D07D309B227891A900D7094D /* layer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layer.js; sourceTree = "<group>"; };
+		D07D309C227891A900D7094D /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		D07D309D227891A900D7094D /* laytpl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laytpl.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +182,7 @@
 		D039B3D82278254400901ACC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D07D30732278853E00D7094D /* html */,
 				D039B3D92278257D00901ACC /* HiNetManager.h */,
 				D039B3DA2278257D00901ACC /* HiNetManager.m */,
 				D039B3DF227825EC00901ACC /* HiNetConfiguration.h */,
@@ -126,8 +194,121 @@
 				D039B3E82278311B00901ACC /* HiNetRequest.h */,
 				D039B3E92278311B00901ACC /* HiNetRequest.m */,
 				D039B3F222784AC800901ACC /* HiNetJsonable.h */,
+				D0379A5E227898F50068F5C2 /* HiNetListModel.h */,
+				D0379A5F227898F50068F5C2 /* HiNetListModel.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		D07D30732278853E00D7094D /* html */ = {
+			isa = PBXGroup;
+			children = (
+				D07D3076227891A900D7094D /* layui */,
+				D07D30742278855100D7094D /* network.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		D07D3076227891A900D7094D /* layui */ = {
+			isa = PBXGroup;
+			children = (
+				D07D3077227891A900D7094D /* layui.js */,
+				D07D3078227891A900D7094D /* css */,
+				D07D3088227891A900D7094D /* layui.all.js */,
+				D07D3089227891A900D7094D /* lay */,
+			);
+			path = layui;
+			sourceTree = "<group>";
+		};
+		D07D3078227891A900D7094D /* css */ = {
+			isa = PBXGroup;
+			children = (
+				D07D3079227891A900D7094D /* layui.mobile.css */,
+				D07D307A227891A900D7094D /* layui.css */,
+				D07D307B227891A900D7094D /* modules */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		D07D307B227891A900D7094D /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				D07D307C227891A900D7094D /* code.css */,
+				D07D307D227891A900D7094D /* layer */,
+				D07D3085227891A900D7094D /* laydate */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		D07D307D227891A900D7094D /* layer */ = {
+			isa = PBXGroup;
+			children = (
+				D07D307E227891A900D7094D /* default */,
+			);
+			path = layer;
+			sourceTree = "<group>";
+		};
+		D07D307E227891A900D7094D /* default */ = {
+			isa = PBXGroup;
+			children = (
+				D07D307F227891A900D7094D /* icon-ext.png */,
+				D07D3080227891A900D7094D /* icon.png */,
+				D07D3081227891A900D7094D /* loading-2.gif */,
+				D07D3082227891A900D7094D /* loading-0.gif */,
+				D07D3083227891A900D7094D /* loading-1.gif */,
+				D07D3084227891A900D7094D /* layer.css */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		D07D3085227891A900D7094D /* laydate */ = {
+			isa = PBXGroup;
+			children = (
+				D07D3086227891A900D7094D /* default */,
+			);
+			path = laydate;
+			sourceTree = "<group>";
+		};
+		D07D3086227891A900D7094D /* default */ = {
+			isa = PBXGroup;
+			children = (
+				D07D3087227891A900D7094D /* laydate.css */,
+			);
+			path = default;
+			sourceTree = "<group>";
+		};
+		D07D3089227891A900D7094D /* lay */ = {
+			isa = PBXGroup;
+			children = (
+				D07D308A227891A900D7094D /* modules */,
+			);
+			path = lay;
+			sourceTree = "<group>";
+		};
+		D07D308A227891A900D7094D /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				D07D308B227891A900D7094D /* mobile.js */,
+				D07D308C227891A900D7094D /* rate.js */,
+				D07D308D227891A900D7094D /* util.js */,
+				D07D308E227891A900D7094D /* element.js */,
+				D07D308F227891A900D7094D /* flow.js */,
+				D07D3090227891A900D7094D /* code.js */,
+				D07D3091227891A900D7094D /* tree.js */,
+				D07D3092227891A900D7094D /* laydate.js */,
+				D07D3093227891A900D7094D /* upload.js */,
+				D07D3094227891A900D7094D /* colorpicker.js */,
+				D07D3095227891A900D7094D /* table.js */,
+				D07D3096227891A900D7094D /* carousel.js */,
+				D07D3097227891A900D7094D /* form.js */,
+				D07D3098227891A900D7094D /* slider.js */,
+				D07D3099227891A900D7094D /* laypage.js */,
+				D07D309A227891A900D7094D /* layedit.js */,
+				D07D309B227891A900D7094D /* layer.js */,
+				D07D309C227891A900D7094D /* jquery.js */,
+				D07D309D227891A900D7094D /* laytpl.js */,
+			);
+			path = modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +371,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07D30BB227891A900D7094D /* jquery.js in Resources */,
+				D07D30B8227891A900D7094D /* laypage.js in Resources */,
+				D07D30B9227891A900D7094D /* layedit.js in Resources */,
+				D07D30AE227891A900D7094D /* flow.js in Resources */,
+				D07D30AB227891A900D7094D /* rate.js in Resources */,
+				D07D30B3227891A900D7094D /* colorpicker.js in Resources */,
+				D07D309E227891A900D7094D /* layui.js in Resources */,
+				D07D30AA227891A900D7094D /* mobile.js in Resources */,
 				D039B3CF2278253D00901ACC /* LaunchScreen.storyboard in Resources */,
+				D07D30AF227891A900D7094D /* code.js in Resources */,
+				D07D30A9227891A900D7094D /* layui.all.js in Resources */,
+				D07D30A2227891A900D7094D /* icon-ext.png in Resources */,
+				D07D30A7227891A900D7094D /* layer.css in Resources */,
+				D07D30B6227891A900D7094D /* form.js in Resources */,
+				D07D30B1227891A900D7094D /* laydate.js in Resources */,
+				D07D30A1227891A900D7094D /* code.css in Resources */,
+				D07D30BC227891A900D7094D /* laytpl.js in Resources */,
+				D07D30A4227891A900D7094D /* loading-2.gif in Resources */,
+				D07D30752278855100D7094D /* network.html in Resources */,
+				D07D30B4227891A900D7094D /* table.js in Resources */,
+				D07D30AC227891A900D7094D /* util.js in Resources */,
+				D07D30A8227891A900D7094D /* laydate.css in Resources */,
 				D039B3CC2278253D00901ACC /* Assets.xcassets in Resources */,
+				D07D30B7227891A900D7094D /* slider.js in Resources */,
+				D07D30A3227891A900D7094D /* icon.png in Resources */,
+				D07D30A5227891A900D7094D /* loading-0.gif in Resources */,
+				D07D30BA227891A900D7094D /* layer.js in Resources */,
+				D07D30A0227891A900D7094D /* layui.css in Resources */,
+				D07D30B0227891A900D7094D /* tree.js in Resources */,
+				D07D30B2227891A900D7094D /* upload.js in Resources */,
 				D039B3CA2278253900901ACC /* Main.storyboard in Resources */,
+				D07D30B5227891A900D7094D /* carousel.js in Resources */,
+				D07D309F227891A900D7094D /* layui.mobile.css in Resources */,
+				D07D30A6227891A900D7094D /* loading-1.gif in Resources */,
+				D07D30AD227891A900D7094D /* element.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +490,7 @@
 				D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */,
 				D039B3C72278253900901ACC /* ViewController.m in Sources */,
 				D039B3E1227825EC00901ACC /* HiNetConfiguration.m in Sources */,
+				D0379A60227898F50068F5C2 /* HiNetListModel.m in Sources */,
 				D039B3D22278253D00901ACC /* main.m in Sources */,
 				D039B3C42278253900901ACC /* AppDelegate.m in Sources */,
 			);

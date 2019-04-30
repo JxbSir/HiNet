@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDate* startDate;
 @property (nonatomic, strong) NSDate* endDate;
 
+- (NSString *)start;
+- (NSString *)end;
+- (double)takeTime;
+
 - (void)append:(NSData *)data;
 
 @end
