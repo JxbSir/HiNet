@@ -123,7 +123,7 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
                         if (!network.responseHeaders || network.responseHeaders.length == 0) {
                             network.responseHeaders = @"无";
                         }
-                        if ([network.type containsString:@"json"] || [network.type containsString:@"text"] || [network.type containsString:@"html"] || [network.type containsString:@"xml"]) {
+                        if ([network.type containsString:@"application/"] || [network.type containsString:@"text"]) {
                             network.responseBody = [[NSString alloc] initWithData:req.responseData encoding:NSUTF8StringEncoding];
                             if (!network.responseBody || network.responseBody.length == 0) {
                                 network.responseBody = @"无";
