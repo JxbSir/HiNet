@@ -37,14 +37,14 @@
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Response Headers</legend>
                 </fieldset>
-                <div id="hi-resp-hader-body" class="layui-code">
-                </div>
+                <pre id="hi-resp-hader-body" class="layui-code">
+                </pre>
                 
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Response Body</legend>
                 </fieldset>
-                <div id="hi-resp-body-body" class="layui-code">
-                </div>
+                <pre id="hi-resp-body-body" class="layui-code">
+                </pre>
             </div>
         </div>
         
@@ -122,12 +122,20 @@
                                $("#hi-req-url-body").html(data["name"]);
                                $("#hi-req-header-body").html(data["requestHeaders"]);
                                $("#hi-req-body-body").html(data["requestBody"]);
-                               $("#hi-resp-hader-body").html(data["responseHeaders"]);
+                               
+                               var respheader = data["responseHeaders"]
+                               var result = JSON.stringify(JSON.parse(respheader), null, 4);
+                               $("#hi-resp-hader-body").html(result);
+                               
                                if (data["type"] == "image/jpeg") {
-                               var img = "<img src='" + data["name"] +"' style='width:200px;'>"
-                                $("#hi-resp-body-body").html(img);
+                                    var img = "<img src='" + data["name"] +"' style='width:200px;'>"
+                                    $("#hi-resp-body-body").html(img);
+                               } else if (data["type"] == "application/json") {
+                                    var responseBody = data["responseBody"]
+                                    var result = JSON.stringify(JSON.parse(responseBody), null, 4);
+                                    $("#hi-resp-body-body").html(result);
                                } else {
-                                $("#hi-resp-body-body").html(data["responseBody"]);
+                                    $("#hi-resp-body-body").html(data["responseBody"]);
                                }
                                
                                //标注选中样式
