@@ -8,7 +8,6 @@
 
 #import "HiNetManager.h"
 #import "HiNetURLSessionExchanger.h"
-#import "HiNetURLConnectionExchanger.h"
 #import "HiNetRequest.h"
 #import "HiNetListModel.h"
 #import "NSDictionary+HiNetConvert.h"
@@ -18,9 +17,8 @@
 
 NSString *const kNetworkTaskList = @"kNetworkTaskList";
 
-@interface HiNetManager ()<HiNetURLSessionExchangerDelegate, HiNetURLConnectionExchangerDelegate>
+@interface HiNetManager ()<HiNetURLSessionExchangerDelegate>
 @property (nonatomic, strong) HiNetURLSessionExchanger* sessionExchanger;
-@property (nonatomic, strong) HiNetURLConnectionExchanger* connectionExchanger;
 @property (nonatomic, strong) GCDWebServer* server;
     
 @property (nonatomic, strong) NSMutableDictionary* executingTasks;
@@ -44,9 +42,6 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
         self.executingTasks = [NSMutableDictionary dictionary];
         self.sessionExchanger = [[HiNetURLSessionExchanger alloc] init];
         self.sessionExchanger.delegate = self;
-        
-        self.connectionExchanger = [[HiNetURLConnectionExchanger alloc] init];
-        self.connectionExchanger.delegate = self;
     }
     return self;
 }
@@ -266,6 +261,4 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     }
 }
 
-
-#pragma mark - HiNetURLConnectionExchangerDelegate
 @end
