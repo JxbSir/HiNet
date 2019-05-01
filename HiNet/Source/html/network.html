@@ -17,6 +17,12 @@
         <div class="layui-col-md12">
             <div class="layui-card">
                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>Request URL</legend>
+                </fieldset>
+                <div id="hi-req-url-body" class="layui-code">
+                </div>
+                
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
                     <legend>Request Headers</legend>
                 </fieldset>
                 <div id="hi-req-header-body" class="layui-code">
@@ -113,10 +119,16 @@
                                var $ = layui.jquery;
                                var data = obj.data;
                                
+                               $("#hi-req-url-body").html(data["name"]);
                                $("#hi-req-header-body").html(data["requestHeaders"]);
                                $("#hi-req-body-body").html(data["requestBody"]);
                                $("#hi-resp-hader-body").html(data["responseHeaders"]);
-                               $("#hi-resp-body-body").html(data["responseBody"]);
+                               if (data["type"] == "image/jpeg") {
+                               var img = "<img src='" + data["name"] +"' style='width:200px;'>"
+                                $("#hi-resp-body-body").html(img);
+                               } else {
+                                $("#hi-resp-body-body").html(data["responseBody"]);
+                               }
                                
                                //标注选中样式
                                obj.tr.addClass('layui-table-click').siblings().removeClass('layui-table-click');
