@@ -16,7 +16,7 @@ iOS端轻量级网络抓包工具
 ### 集成 Cocoapods
 
 ```
-pod 'HiNet' :git => 'https://github.com/JxbSir/HiNet.git', 
+pod 'HiNet', :git => 'https://github.com/JxbSir/HiNet.git' 
 ```
 
 ```objective-c
