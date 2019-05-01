@@ -11,6 +11,7 @@
 #import "HiNetURLConnectionExchanger.h"
 #import "HiNetRequest.h"
 #import "HiNetListModel.h"
+#import "NSDictionary+HiNetConvert.h"
 
 #import <GCDWebServer/GCDWebServer.h>
 #import <GCDWebServer/GCDWebServerDataResponse.h>
@@ -54,10 +55,19 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     _server = [[GCDWebServer alloc] init];
     
     [self addIndexHandler];
+    [self addNetworkClearHandler];
     [self addNetworkDataHandler];
     [self addResouceHandler];
     
     [_server start];
+}
+
+- (void)addNetworkClearHandler {
+     [_server addHandlerForMethod:@"GET" path:@"/network/clear" requestClass:[GCDWebServerRequest class] processBlock:^GCDWebServerResponse * _Nullable(__kindof GCDWebServerRequest * _Nonnull request) {
+         [[NSUserDefaults standardUserDefaults] removeObjectForKey:kNetworkTaskList];
+         [[NSUserDefaults standardUserDefaults] synchronize];
+         return [GCDWebServerDataResponse responseWithText:@""];
+     }];
 }
 
 - (void)addNetworkDataHandler {
@@ -100,6 +110,25 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
                         network.time = [NSString stringWithFormat:@"%.3fms", [req takeTime]];
                         network.start = [req start];
                         network.end = [req end];
+                        
+                        network.requestHeaders = [req.requestHeaders toString];
+                        if (!network.requestHeaders || network.requestHeaders.length == 0) {
+                            network.requestHeaders = @"无";
+                        }
+                        network.requestBody = [[NSString alloc] initWithData:req.requestBody encoding:NSUTF8StringEncoding];
+                        if (!network.requestBody || network.requestBody.length == 0) {
+                            network.requestBody = @"无";
+                        }
+                        network.responseHeaders = [req.responseHeaders toString];
+                        if (!network.responseHeaders || network.responseHeaders.length == 0) {
+                            network.responseHeaders = @"无";
+                        }
+                        if ([network.type containsString:@"json"]) {
+                            network.responseBody = [[NSString alloc] initWithData:req.responseData encoding:NSUTF8StringEncoding];
+                        }
+                        if (!network.responseBody || network.responseBody.length == 0) {
+                            network.responseBody = @"无";
+                        }
                         [array addObject:network];
                     }
                     

@@ -10,13 +10,34 @@
     </head>
     <body>
         
+        <button id="hiclearbtn" class="layui-btn layui-btn-normal" lay-submit="">清空网络</button>
+        
         <table class="layui-hide" id="network" lay-filter="test"></table>
         
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div id="hiheaders" class="layui-card-body">标题</div>
-                <div id="hicontent" class="layui-card-body">
-                    内容
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>Request Headers</legend>
+                </fieldset>
+                <div id="hi-req-header-body" class="layui-code">
+                </div>
+                
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>Request Body</legend>
+                </fieldset>
+                <div id="hi-req-body-body" class="layui-code">
+                </div>
+                
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>Response Headers</legend>
+                </fieldset>
+                <div id="hi-resp-hader-body" class="layui-code">
+                </div>
+                
+                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+                    <legend>Response Body</legend>
+                </fieldset>
+                <div id="hi-resp-body-body" class="layui-code">
                 </div>
             </div>
         </div>
@@ -25,6 +46,32 @@
         <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
         
         <script>
+            
+            layui.use(['jquery', 'table'], function() {
+                      var table = layui.table;
+                      $=layui.jquery;
+                      $(document).on('click','#hiclearbtn',function(){
+                                     
+                                     $.ajax({
+                                            type: "GET",
+                                            url: "/network/clear",
+                                            contentType: "application/json; charset=utf-8",
+                                            success: function (message) {
+                                                table.reload('network');
+                                                layer.alert("已清空");
+                                            },
+                                            error: function (message) {
+                                                layer.alert("清空失败，请重试");
+                                            }
+                                    });
+                                     
+                            });
+                      });
+                           
+        </script>
+        
+        <script>
+
             layui.use('table', function(){
                       var table = layui.table;
                       
@@ -44,17 +91,32 @@
                                    ,page: true
                                    });
                       
+                      table.reload({
+                                   elem: '#network'
+                                   ,url:'/network/list'
+                                   ,cols: [[
+                                            {field:'name', title:'Name', fixed: 'left', unresize: true}
+                                            ,{field:'method', title:'Method', width:80}
+                                            ,{field:'status', title:'Status', width:80}
+                                            ,{field:'type', title:'Content-Type', width:180}
+                                            ,{field:'size', title:'Size', width:130}
+                                            ,{field:'time', title:'Time', width:150}
+                                            ,{field:'start', title:'Start Time', width:200}
+                                            ,{field:'end', title:'Finish Time', width:200}
+                                            ]]
+                                   ,page: true
+                                   });
+                      
                       //监听行单击事件（单击事件为：rowDouble）
                       table.on('row(test)', function(obj){
-                               var $ = layui.jquery;
-                               $("#hiheaders").html("a<br>b");
-                               $("#hicontent").html("a<br>b");
                                
+                               var $ = layui.jquery;
                                var data = obj.data;
                                
-                               layer.alert(JSON.stringify(data), {
-                                           title: '当前行数据：'
-                                           });
+                               $("#hi-req-header-body").html(data["requestHeaders"]);
+                               $("#hi-req-body-body").html(data["requestBody"]);
+                               $("#hi-resp-hader-body").html(data["responseHeaders"]);
+                               $("#hi-resp-body-body").html(data["responseBody"]);
                                
                                //标注选中样式
                                obj.tr.addClass('layui-table-click').siblings().removeClass('layui-table-click');

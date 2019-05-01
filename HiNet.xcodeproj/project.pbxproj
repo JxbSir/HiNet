@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */; };
 		D0379A60227898F50068F5C2 /* HiNetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0379A5F227898F50068F5C2 /* HiNetListModel.m */; };
+		D0379A63227962DB0068F5C2 /* NSDictionary+HiNetConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */; };
 		D039B3C42278253900901ACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C32278253900901ACC /* AppDelegate.m */; };
 		D039B3C72278253900901ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C62278253900901ACC /* ViewController.m */; };
 		D039B3CA2278253900901ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3C82278253900901ACC /* Main.storyboard */; };
@@ -60,6 +61,8 @@
 		A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.debug.xcconfig"; sourceTree = "<group>"; };
 		D0379A5E227898F50068F5C2 /* HiNetListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetListModel.h; sourceTree = "<group>"; };
 		D0379A5F227898F50068F5C2 /* HiNetListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetListModel.m; sourceTree = "<group>"; };
+		D0379A61227962DB0068F5C2 /* NSDictionary+HiNetConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HiNetConvert.h"; sourceTree = "<group>"; };
+		D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HiNetConvert.m"; sourceTree = "<group>"; };
 		D039B3BF2278253900901ACC /* HiNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D039B3C22278253900901ACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D039B3C32278253900901ACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				D039B3F222784AC800901ACC /* HiNetJsonable.h */,
 				D0379A5E227898F50068F5C2 /* HiNetListModel.h */,
 				D0379A5F227898F50068F5C2 /* HiNetListModel.m */,
+				D0379A61227962DB0068F5C2 /* NSDictionary+HiNetConvert.h */,
+				D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D039B3DB2278257D00901ACC /* HiNetManager.m in Sources */,
+				D0379A63227962DB0068F5C2 /* NSDictionary+HiNetConvert.m in Sources */,
 				D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */,
 				D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */,
 				D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */,

@@ -37,6 +37,18 @@
         if ([json objectForKey:@"end"]) {
             self.end = [json objectForKey:@"end"];
         }
+        if ([json objectForKey:@"requestHeaders"]) {
+            self.requestHeaders = [json objectForKey:@"requestHeaders"];
+        }
+        if ([json objectForKey:@"requestBody"]) {
+            self.requestBody = [json objectForKey:@"requestBody"];
+        }
+        if ([json objectForKey:@"responseHeaders"]) {
+            self.responseHeaders = [json objectForKey:@"responseHeaders"];
+        }
+        if ([json objectForKey:@"responseBody"]) {
+            self.responseBody = [json objectForKey:@"responseBody"];
+        }
     }
     return self;
 }
@@ -66,6 +78,18 @@
     }
     if (self.end) {
         [json setObject:self.end forKey:@"end"];
+    }
+    if (self.requestHeaders) {
+        [json setObject:self.requestHeaders forKey:@"requestHeaders"];
+    }
+    if (self.requestBody) {
+        [json setObject:self.requestBody forKey:@"requestBody"];
+    }
+    if (self.responseHeaders) {
+        [json setObject:self.responseHeaders forKey:@"responseHeaders"];
+    }
+    if (self.responseBody) {
+        [json setObject:self.responseBody forKey:@"responseBody"];
     }
     return json;
 }

@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* time;
 @property (nonatomic, strong) NSString* start;
 @property (nonatomic, strong) NSString* end;
+
+@property (nonatomic, strong) NSString* requestHeaders;
+@property (nonatomic, strong) NSString* requestBody;
+@property (nonatomic, strong) NSString* responseHeaders;
+@property (nonatomic, strong) NSString* responseBody;
 @end
 
 @interface HiNetListModel : NSObject<HiNetJsonable>
