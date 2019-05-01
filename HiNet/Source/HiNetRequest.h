@@ -25,8 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* statusCode;
 @property (nonatomic, strong) NSError* error;
 
-@property (nonatomic, strong) NSDate* startDate;
-@property (nonatomic, strong) NSDate* endDate;
+@property (nonatomic, strong) NSNumber* startDate;
+@property (nonatomic, strong) NSNumber* endDate;
 
 - (NSString *)start;
 - (NSString *)end;

@@ -11,21 +11,19 @@
 @implementation HiNetRequest
 
 - (double)takeTime {
-    double end = [self.endDate timeIntervalSince1970] * 1000;
-    double start = [self.startDate timeIntervalSince1970] * 1000;
-    return end - start;
+    return self.endDate.doubleValue - self.startDate.doubleValue;
 }
 
 - (NSString *)start {
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    return [formatter stringFromDate:self.startDate];
+    return [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:self.startDate.doubleValue / 1000]];
 }
 
 - (NSString *)end {
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    return [formatter stringFromDate:self.endDate];
+    return [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:self.endDate.doubleValue / 1000]];
 }
 
 - (instancetype)initWithJSON:(id)json {
@@ -65,15 +63,11 @@
         }
         
         if ([json objectForKey:@"startDate"]) {
-            NSDate* date = [NSDate dateWithTimeIntervalSince1970:[[json objectForKey:@"startDate"] integerValue]];
-            
-            self.startDate = date;
+            self.startDate = [json objectForKey:@"startDate"];
         }
         
         if ([json objectForKey:@"endDate"]) {
-            NSDate* date = [NSDate dateWithTimeIntervalSince1970:[[json objectForKey:@"endDate"] integerValue]];
-            
-            self.endDate = date;
+            self.endDate = [json objectForKey:@"endDate"];
         }
     }
     
@@ -119,13 +113,11 @@
     }
     
     if (self.startDate) {
-        NSNumber* date = [NSNumber numberWithInteger:[self.startDate timeIntervalSince1970]];
-        [json setObject:date forKey:@"startDate"];
+        [json setObject:self.startDate forKey:@"startDate"];
     }
     
     if (self.endDate) {
-        NSNumber* date = [NSNumber numberWithInteger:[self.endDate timeIntervalSince1970]];
-        [json setObject:date forKey:@"endDate"];
+        [json setObject:self.endDate forKey:@"endDate"];
     }
     
     return json;

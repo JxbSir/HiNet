@@ -1,0 +1,32 @@
+{
+  "name": "HiNet",
+  "version": "1.0",
+  "summary": "HiNet, A lightweight http/https capture tool.",
+  "description": "HiNet, A lightweight http/https capture tool.",
+  "homepage": "https://github.com/JxbSir/HiNet.git",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "jinxuebin": "i@jxb.name"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "git@github.com:JxbSir/HiNet.git",
+    "tag": "1.0"
+  },
+  "source_files": "HiNet/Source/**/*.{h,m}",
+  "resources": [
+    "HiNet/Source/**/*.html",
+    "HiNet/Source/**/*.js",
+    "HiNet/Source/**/*.css"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "GCDWebServer": [
+
+    ]
+  }
+}

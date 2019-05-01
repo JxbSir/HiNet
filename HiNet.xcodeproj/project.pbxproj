@@ -7,62 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */; };
-		D0379A60227898F50068F5C2 /* HiNetListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0379A5F227898F50068F5C2 /* HiNetListModel.m */; };
-		D0379A63227962DB0068F5C2 /* NSDictionary+HiNetConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */; };
+		23476C4413C7820CBCF57E8B /* libPods-HiNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7AA7B512BB320BC6D5B7FB /* libPods-HiNet.a */; };
 		D039B3C42278253900901ACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C32278253900901ACC /* AppDelegate.m */; };
 		D039B3C72278253900901ACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3C62278253900901ACC /* ViewController.m */; };
 		D039B3CA2278253900901ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3C82278253900901ACC /* Main.storyboard */; };
 		D039B3CC2278253D00901ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D039B3CB2278253D00901ACC /* Assets.xcassets */; };
 		D039B3CF2278253D00901ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D039B3CD2278253D00901ACC /* LaunchScreen.storyboard */; };
 		D039B3D22278253D00901ACC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3D12278253D00901ACC /* main.m */; };
-		D039B3DB2278257D00901ACC /* HiNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3DA2278257D00901ACC /* HiNetManager.m */; };
-		D039B3E1227825EC00901ACC /* HiNetConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E0227825EC00901ACC /* HiNetConfiguration.m */; };
-		D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */; };
-		D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */; };
-		D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039B3E92278311B00901ACC /* HiNetRequest.m */; };
-		D07D30752278855100D7094D /* network.html in Resources */ = {isa = PBXBuildFile; fileRef = D07D30742278855100D7094D /* network.html */; };
-		D07D309E227891A900D7094D /* layui.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3077227891A900D7094D /* layui.js */; };
-		D07D309F227891A900D7094D /* layui.mobile.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3079227891A900D7094D /* layui.mobile.css */; };
-		D07D30A0227891A900D7094D /* layui.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D307A227891A900D7094D /* layui.css */; };
-		D07D30A1227891A900D7094D /* code.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D307C227891A900D7094D /* code.css */; };
-		D07D30A2227891A900D7094D /* icon-ext.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D307F227891A900D7094D /* icon-ext.png */; };
-		D07D30A3227891A900D7094D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D07D3080227891A900D7094D /* icon.png */; };
-		D07D30A4227891A900D7094D /* loading-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3081227891A900D7094D /* loading-2.gif */; };
-		D07D30A5227891A900D7094D /* loading-0.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3082227891A900D7094D /* loading-0.gif */; };
-		D07D30A6227891A900D7094D /* loading-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = D07D3083227891A900D7094D /* loading-1.gif */; };
-		D07D30A7227891A900D7094D /* layer.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3084227891A900D7094D /* layer.css */; };
-		D07D30A8227891A900D7094D /* laydate.css in Resources */ = {isa = PBXBuildFile; fileRef = D07D3087227891A900D7094D /* laydate.css */; };
-		D07D30A9227891A900D7094D /* layui.all.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3088227891A900D7094D /* layui.all.js */; };
-		D07D30AA227891A900D7094D /* mobile.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308B227891A900D7094D /* mobile.js */; };
-		D07D30AB227891A900D7094D /* rate.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308C227891A900D7094D /* rate.js */; };
-		D07D30AC227891A900D7094D /* util.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308D227891A900D7094D /* util.js */; };
-		D07D30AD227891A900D7094D /* element.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308E227891A900D7094D /* element.js */; };
-		D07D30AE227891A900D7094D /* flow.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D308F227891A900D7094D /* flow.js */; };
-		D07D30AF227891A900D7094D /* code.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3090227891A900D7094D /* code.js */; };
-		D07D30B0227891A900D7094D /* tree.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3091227891A900D7094D /* tree.js */; };
-		D07D30B1227891A900D7094D /* laydate.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3092227891A900D7094D /* laydate.js */; };
-		D07D30B2227891A900D7094D /* upload.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3093227891A900D7094D /* upload.js */; };
-		D07D30B3227891A900D7094D /* colorpicker.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3094227891A900D7094D /* colorpicker.js */; };
-		D07D30B4227891A900D7094D /* table.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3095227891A900D7094D /* table.js */; };
-		D07D30B5227891A900D7094D /* carousel.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3096227891A900D7094D /* carousel.js */; };
-		D07D30B6227891A900D7094D /* form.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3097227891A900D7094D /* form.js */; };
-		D07D30B7227891A900D7094D /* slider.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3098227891A900D7094D /* slider.js */; };
-		D07D30B8227891A900D7094D /* laypage.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D3099227891A900D7094D /* laypage.js */; };
-		D07D30B9227891A900D7094D /* layedit.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309A227891A900D7094D /* layedit.js */; };
-		D07D30BA227891A900D7094D /* layer.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309B227891A900D7094D /* layer.js */; };
-		D07D30BB227891A900D7094D /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309C227891A900D7094D /* jquery.js */; };
-		D07D30BC227891A900D7094D /* laytpl.js in Resources */ = {isa = PBXBuildFile; fileRef = D07D309D227891A900D7094D /* laytpl.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HiNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D7AA7B512BB320BC6D5B7FB /* libPods-HiNet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiNet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0E7C265AA5B7E025F744ED /* Pods-HiNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.release.xcconfig"; sourceTree = "<group>"; };
 		A32378837F6124CDAB66FE50 /* Pods-HiNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiNet/Pods-HiNet.debug.xcconfig"; sourceTree = "<group>"; };
-		D0379A5E227898F50068F5C2 /* HiNetListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetListModel.h; sourceTree = "<group>"; };
-		D0379A5F227898F50068F5C2 /* HiNetListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetListModel.m; sourceTree = "<group>"; };
-		D0379A61227962DB0068F5C2 /* NSDictionary+HiNetConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HiNetConvert.h"; sourceTree = "<group>"; };
-		D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HiNetConvert.m"; sourceTree = "<group>"; };
 		D039B3BF2278253900901ACC /* HiNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D039B3C22278253900901ACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D039B3C32278253900901ACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,49 +30,6 @@
 		D039B3CE2278253D00901ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D039B3D02278253D00901ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D039B3D12278253D00901ACC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D039B3D92278257D00901ACC /* HiNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetManager.h; sourceTree = "<group>"; };
-		D039B3DA2278257D00901ACC /* HiNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetManager.m; sourceTree = "<group>"; };
-		D039B3DF227825EC00901ACC /* HiNetConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetConfiguration.h; sourceTree = "<group>"; };
-		D039B3E0227825EC00901ACC /* HiNetConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetConfiguration.m; sourceTree = "<group>"; };
-		D039B3E22278298C00901ACC /* HiNetURLSessionExchanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetURLSessionExchanger.h; sourceTree = "<group>"; };
-		D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetURLSessionExchanger.m; sourceTree = "<group>"; };
-		D039B3E5227829B100901ACC /* HiNetURLConnectionExchanger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetURLConnectionExchanger.h; sourceTree = "<group>"; };
-		D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetURLConnectionExchanger.m; sourceTree = "<group>"; };
-		D039B3E82278311B00901ACC /* HiNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetRequest.h; sourceTree = "<group>"; };
-		D039B3E92278311B00901ACC /* HiNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HiNetRequest.m; sourceTree = "<group>"; };
-		D039B3F222784AC800901ACC /* HiNetJsonable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HiNetJsonable.h; sourceTree = "<group>"; };
-		D07D30742278855100D7094D /* network.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = network.html; sourceTree = "<group>"; };
-		D07D3077227891A900D7094D /* layui.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layui.js; sourceTree = "<group>"; };
-		D07D3079227891A900D7094D /* layui.mobile.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layui.mobile.css; sourceTree = "<group>"; };
-		D07D307A227891A900D7094D /* layui.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layui.css; sourceTree = "<group>"; };
-		D07D307C227891A900D7094D /* code.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = code.css; sourceTree = "<group>"; };
-		D07D307F227891A900D7094D /* icon-ext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ext.png"; sourceTree = "<group>"; };
-		D07D3080227891A900D7094D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		D07D3081227891A900D7094D /* loading-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-2.gif"; sourceTree = "<group>"; };
-		D07D3082227891A900D7094D /* loading-0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-0.gif"; sourceTree = "<group>"; };
-		D07D3083227891A900D7094D /* loading-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "loading-1.gif"; sourceTree = "<group>"; };
-		D07D3084227891A900D7094D /* layer.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = layer.css; sourceTree = "<group>"; };
-		D07D3087227891A900D7094D /* laydate.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = laydate.css; sourceTree = "<group>"; };
-		D07D3088227891A900D7094D /* layui.all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layui.all.js; sourceTree = "<group>"; };
-		D07D308B227891A900D7094D /* mobile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mobile.js; sourceTree = "<group>"; };
-		D07D308C227891A900D7094D /* rate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = rate.js; sourceTree = "<group>"; };
-		D07D308D227891A900D7094D /* util.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = util.js; sourceTree = "<group>"; };
-		D07D308E227891A900D7094D /* element.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = element.js; sourceTree = "<group>"; };
-		D07D308F227891A900D7094D /* flow.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = flow.js; sourceTree = "<group>"; };
-		D07D3090227891A900D7094D /* code.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = code.js; sourceTree = "<group>"; };
-		D07D3091227891A900D7094D /* tree.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = tree.js; sourceTree = "<group>"; };
-		D07D3092227891A900D7094D /* laydate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laydate.js; sourceTree = "<group>"; };
-		D07D3093227891A900D7094D /* upload.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = upload.js; sourceTree = "<group>"; };
-		D07D3094227891A900D7094D /* colorpicker.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = colorpicker.js; sourceTree = "<group>"; };
-		D07D3095227891A900D7094D /* table.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = table.js; sourceTree = "<group>"; };
-		D07D3096227891A900D7094D /* carousel.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = carousel.js; sourceTree = "<group>"; };
-		D07D3097227891A900D7094D /* form.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = form.js; sourceTree = "<group>"; };
-		D07D3098227891A900D7094D /* slider.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = slider.js; sourceTree = "<group>"; };
-		D07D3099227891A900D7094D /* laypage.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laypage.js; sourceTree = "<group>"; };
-		D07D309A227891A900D7094D /* layedit.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layedit.js; sourceTree = "<group>"; };
-		D07D309B227891A900D7094D /* layer.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = layer.js; sourceTree = "<group>"; };
-		D07D309C227891A900D7094D /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		D07D309D227891A900D7094D /* laytpl.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = laytpl.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				432FBBA7F40ABEDB77B10D9F /* Pods_HiNet.framework in Frameworks */,
+				23476C4413C7820CBCF57E8B /* libPods-HiNet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +47,7 @@
 		87392F46A1EA3C3228995A12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E971945D144CC2DCC53BEB2 /* Pods_HiNet.framework */,
+				7D7AA7B512BB320BC6D5B7FB /* libPods-HiNet.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,7 +82,6 @@
 		D039B3C12278253900901ACC /* HiNet */ = {
 			isa = PBXGroup;
 			children = (
-				D039B3D82278254400901ACC /* Source */,
 				D039B3C22278253900901ACC /* AppDelegate.h */,
 				D039B3C32278253900901ACC /* AppDelegate.m */,
 				D039B3C52278253900901ACC /* ViewController.h */,
@@ -182,140 +95,6 @@
 			path = HiNet;
 			sourceTree = "<group>";
 		};
-		D039B3D82278254400901ACC /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				D07D30732278853E00D7094D /* html */,
-				D039B3D92278257D00901ACC /* HiNetManager.h */,
-				D039B3DA2278257D00901ACC /* HiNetManager.m */,
-				D039B3DF227825EC00901ACC /* HiNetConfiguration.h */,
-				D039B3E0227825EC00901ACC /* HiNetConfiguration.m */,
-				D039B3E22278298C00901ACC /* HiNetURLSessionExchanger.h */,
-				D039B3E32278298C00901ACC /* HiNetURLSessionExchanger.m */,
-				D039B3E5227829B100901ACC /* HiNetURLConnectionExchanger.h */,
-				D039B3E6227829B100901ACC /* HiNetURLConnectionExchanger.m */,
-				D039B3E82278311B00901ACC /* HiNetRequest.h */,
-				D039B3E92278311B00901ACC /* HiNetRequest.m */,
-				D039B3F222784AC800901ACC /* HiNetJsonable.h */,
-				D0379A5E227898F50068F5C2 /* HiNetListModel.h */,
-				D0379A5F227898F50068F5C2 /* HiNetListModel.m */,
-				D0379A61227962DB0068F5C2 /* NSDictionary+HiNetConvert.h */,
-				D0379A62227962DB0068F5C2 /* NSDictionary+HiNetConvert.m */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		D07D30732278853E00D7094D /* html */ = {
-			isa = PBXGroup;
-			children = (
-				D07D3076227891A900D7094D /* layui */,
-				D07D30742278855100D7094D /* network.html */,
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		D07D3076227891A900D7094D /* layui */ = {
-			isa = PBXGroup;
-			children = (
-				D07D3077227891A900D7094D /* layui.js */,
-				D07D3078227891A900D7094D /* css */,
-				D07D3088227891A900D7094D /* layui.all.js */,
-				D07D3089227891A900D7094D /* lay */,
-			);
-			path = layui;
-			sourceTree = "<group>";
-		};
-		D07D3078227891A900D7094D /* css */ = {
-			isa = PBXGroup;
-			children = (
-				D07D3079227891A900D7094D /* layui.mobile.css */,
-				D07D307A227891A900D7094D /* layui.css */,
-				D07D307B227891A900D7094D /* modules */,
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
-		D07D307B227891A900D7094D /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				D07D307C227891A900D7094D /* code.css */,
-				D07D307D227891A900D7094D /* layer */,
-				D07D3085227891A900D7094D /* laydate */,
-			);
-			path = modules;
-			sourceTree = "<group>";
-		};
-		D07D307D227891A900D7094D /* layer */ = {
-			isa = PBXGroup;
-			children = (
-				D07D307E227891A900D7094D /* default */,
-			);
-			path = layer;
-			sourceTree = "<group>";
-		};
-		D07D307E227891A900D7094D /* default */ = {
-			isa = PBXGroup;
-			children = (
-				D07D307F227891A900D7094D /* icon-ext.png */,
-				D07D3080227891A900D7094D /* icon.png */,
-				D07D3081227891A900D7094D /* loading-2.gif */,
-				D07D3082227891A900D7094D /* loading-0.gif */,
-				D07D3083227891A900D7094D /* loading-1.gif */,
-				D07D3084227891A900D7094D /* layer.css */,
-			);
-			path = default;
-			sourceTree = "<group>";
-		};
-		D07D3085227891A900D7094D /* laydate */ = {
-			isa = PBXGroup;
-			children = (
-				D07D3086227891A900D7094D /* default */,
-			);
-			path = laydate;
-			sourceTree = "<group>";
-		};
-		D07D3086227891A900D7094D /* default */ = {
-			isa = PBXGroup;
-			children = (
-				D07D3087227891A900D7094D /* laydate.css */,
-			);
-			path = default;
-			sourceTree = "<group>";
-		};
-		D07D3089227891A900D7094D /* lay */ = {
-			isa = PBXGroup;
-			children = (
-				D07D308A227891A900D7094D /* modules */,
-			);
-			path = lay;
-			sourceTree = "<group>";
-		};
-		D07D308A227891A900D7094D /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				D07D308B227891A900D7094D /* mobile.js */,
-				D07D308C227891A900D7094D /* rate.js */,
-				D07D308D227891A900D7094D /* util.js */,
-				D07D308E227891A900D7094D /* element.js */,
-				D07D308F227891A900D7094D /* flow.js */,
-				D07D3090227891A900D7094D /* code.js */,
-				D07D3091227891A900D7094D /* tree.js */,
-				D07D3092227891A900D7094D /* laydate.js */,
-				D07D3093227891A900D7094D /* upload.js */,
-				D07D3094227891A900D7094D /* colorpicker.js */,
-				D07D3095227891A900D7094D /* table.js */,
-				D07D3096227891A900D7094D /* carousel.js */,
-				D07D3097227891A900D7094D /* form.js */,
-				D07D3098227891A900D7094D /* slider.js */,
-				D07D3099227891A900D7094D /* laypage.js */,
-				D07D309A227891A900D7094D /* layedit.js */,
-				D07D309B227891A900D7094D /* layer.js */,
-				D07D309C227891A900D7094D /* jquery.js */,
-				D07D309D227891A900D7094D /* laytpl.js */,
-			);
-			path = modules;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,7 +106,7 @@
 				D039B3BB2278253900901ACC /* Sources */,
 				D039B3BC2278253900901ACC /* Frameworks */,
 				D039B3BD2278253900901ACC /* Resources */,
-				676DD00854B2F7867AEBB3F6 /* [CP] Embed Pods Frameworks */,
+				AA02552FDA988A44D4F435FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -375,73 +154,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07D30BB227891A900D7094D /* jquery.js in Resources */,
-				D07D30B8227891A900D7094D /* laypage.js in Resources */,
-				D07D30B9227891A900D7094D /* layedit.js in Resources */,
-				D07D30AE227891A900D7094D /* flow.js in Resources */,
-				D07D30AB227891A900D7094D /* rate.js in Resources */,
-				D07D30B3227891A900D7094D /* colorpicker.js in Resources */,
-				D07D309E227891A900D7094D /* layui.js in Resources */,
-				D07D30AA227891A900D7094D /* mobile.js in Resources */,
 				D039B3CF2278253D00901ACC /* LaunchScreen.storyboard in Resources */,
-				D07D30AF227891A900D7094D /* code.js in Resources */,
-				D07D30A9227891A900D7094D /* layui.all.js in Resources */,
-				D07D30A2227891A900D7094D /* icon-ext.png in Resources */,
-				D07D30A7227891A900D7094D /* layer.css in Resources */,
-				D07D30B6227891A900D7094D /* form.js in Resources */,
-				D07D30B1227891A900D7094D /* laydate.js in Resources */,
-				D07D30A1227891A900D7094D /* code.css in Resources */,
-				D07D30BC227891A900D7094D /* laytpl.js in Resources */,
-				D07D30A4227891A900D7094D /* loading-2.gif in Resources */,
-				D07D30752278855100D7094D /* network.html in Resources */,
-				D07D30B4227891A900D7094D /* table.js in Resources */,
-				D07D30AC227891A900D7094D /* util.js in Resources */,
-				D07D30A8227891A900D7094D /* laydate.css in Resources */,
 				D039B3CC2278253D00901ACC /* Assets.xcassets in Resources */,
-				D07D30B7227891A900D7094D /* slider.js in Resources */,
-				D07D30A3227891A900D7094D /* icon.png in Resources */,
-				D07D30A5227891A900D7094D /* loading-0.gif in Resources */,
-				D07D30BA227891A900D7094D /* layer.js in Resources */,
-				D07D30A0227891A900D7094D /* layui.css in Resources */,
-				D07D30B0227891A900D7094D /* tree.js in Resources */,
-				D07D30B2227891A900D7094D /* upload.js in Resources */,
 				D039B3CA2278253900901ACC /* Main.storyboard in Resources */,
-				D07D30B5227891A900D7094D /* carousel.js in Resources */,
-				D07D309F227891A900D7094D /* layui.mobile.css in Resources */,
-				D07D30A6227891A900D7094D /* loading-1.gif in Resources */,
-				D07D30AD227891A900D7094D /* element.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		676DD00854B2F7867AEBB3F6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		90BB92E050811CAB817EBDCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +185,80 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AA02552FDA988A44D4F435FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-resources.sh",
+				"${PODS_ROOT}/../HiNet/Source/html/network.html",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/carousel.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/code.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/colorpicker.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/element.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/flow.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/form.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/jquery.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/laydate.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/layedit.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/layer.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/laypage.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/laytpl.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/mobile.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/rate.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/slider.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/table.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/tree.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/upload.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/lay/modules/util.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/layui.all.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/layui.js",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/css/layui.css",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/css/layui.mobile.css",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/css/modules/code.css",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/css/modules/laydate/default/laydate.css",
+				"${PODS_ROOT}/../HiNet/Source/html/layui/css/modules/layer/default/layer.css",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/network.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/carousel.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/code.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/colorpicker.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/element.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/flow.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/form.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jquery.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/laydate.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layedit.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layer.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/laypage.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/laytpl.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mobile.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/rate.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/slider.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/table.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/tree.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/upload.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/util.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layui.all.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layui.js",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layui.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layui.mobile.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/code.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/laydate.css",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/layer.css",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HiNet/Pods-HiNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -471,14 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D039B3DB2278257D00901ACC /* HiNetManager.m in Sources */,
-				D0379A63227962DB0068F5C2 /* NSDictionary+HiNetConvert.m in Sources */,
-				D039B3E7227829B100901ACC /* HiNetURLConnectionExchanger.m in Sources */,
-				D039B3EA2278311B00901ACC /* HiNetRequest.m in Sources */,
-				D039B3E42278298C00901ACC /* HiNetURLSessionExchanger.m in Sources */,
 				D039B3C72278253900901ACC /* ViewController.m in Sources */,
-				D039B3E1227825EC00901ACC /* HiNetConfiguration.m in Sources */,
-				D0379A60227898F50068F5C2 /* HiNetListModel.m in Sources */,
 				D039B3D22278253D00901ACC /* main.m in Sources */,
 				D039B3C42278253900901ACC /* AppDelegate.m in Sources */,
 			);

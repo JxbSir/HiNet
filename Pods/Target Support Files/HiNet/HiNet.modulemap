@@ -1,0 +1,6 @@
+framework module HiNet {
+  umbrella header "HiNet-umbrella.h"
+
+  export *
+  module * { export * }
+}

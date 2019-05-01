@@ -17,6 +17,8 @@ PODS:
   - GCDWebServer (3.5.2):
     - GCDWebServer/Core (= 3.5.2)
   - GCDWebServer/Core (3.5.2)
+  - HiNet (1.0):
+    - GCDWebServer
   - SDWebImage (5.0.1):
     - SDWebImage/Core (= 5.0.1)
   - SDWebImage/Core (5.0.1)
@@ -24,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - GCDWebServer (~> 3.0)
+  - HiNet (from `../HiNet`)
   - SDWebImage
 
 SPEC REPOS:
@@ -32,11 +35,16 @@ SPEC REPOS:
     - GCDWebServer
     - SDWebImage
 
+EXTERNAL SOURCES:
+  HiNet:
+    :path: "../HiNet"
+
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
+  HiNet: 10d6a8923cb06281ef37ffd91ac45f1473269aaf
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
 
-PODFILE CHECKSUM: 4454a59066d0471b67ac095e54912772e2108c64
+PODFILE CHECKSUM: 4a07797cc459a87ec032a0c580652e6c29361764
 
 COCOAPODS: 1.5.3

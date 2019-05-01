@@ -223,7 +223,7 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     req.requestHeaders = dataTask.currentRequest.allHTTPHeaderFields;
     req.requestBody = dataTask.currentRequest.HTTPBody;
     req.requestMethod = dataTask.currentRequest.HTTPMethod;
-    req.startDate = [NSDate date];
+    req.startDate = @([[NSDate date] timeIntervalSince1970] * 1000);
     
     [self.executingTasks setObject:req forKey:task];
 }
@@ -258,7 +258,7 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     if (value && [value isKindOfClass:HiNetRequest.class]) {
         HiNetRequest* req = (HiNetRequest *)value;
         req.error = error;
-        req.endDate = [NSDate date];
+        req.endDate = @([[NSDate date] timeIntervalSince1970] * 1000);
         [self saveTask:req];
         [self.executingTasks removeObjectForKey:task];
     }
