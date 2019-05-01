@@ -105,7 +105,9 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
                         network.name = req.url.absoluteString;
                         network.method = req.requestMethod;
                         network.type = req.responseHeaders[@"Content-Type"];
-                        network.size = req.responseHeaders[@"Content-Length"];
+                        
+                        NSString* count = (NSString*)req.responseHeaders[@"Content-Length"];
+                        network.size = [NSByteCountFormatter stringFromByteCount:count.longLongValue countStyle:NSByteCountFormatterCountStyleFile];
                         network.status = req.statusCode;
                         network.time = [NSString stringWithFormat:@"%.3fms", [req takeTime]];
                         network.start = [req start];
