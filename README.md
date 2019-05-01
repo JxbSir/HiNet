@@ -23,3 +23,6 @@ pod 'HiNet', :git => 'https://github.com/JxbSir/HiNet.git'
 [[HiNetManager shared] start];
 //log中会有可以访问的ip地址与端口，然后再浏览器中访问即可
 ```
+
+### B/S视图
+![](https://raw.githubusercontent.com/JxbSir/HiNet/master/screenshot.jpg)
