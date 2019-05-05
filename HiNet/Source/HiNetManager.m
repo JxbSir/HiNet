@@ -46,7 +46,16 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     return self;
 }
 
+
 - (void)start {
+    [self startWithPort:8080];
+}
+
+- (void)startWithPort:(NSUInteger)port {
+    [self startWithPort:port bonjourName:nil];
+}
+
+- (void)startWithPort:(NSUInteger)port bonjourName:(NSString *)name {
     _server = [[GCDWebServer alloc] init];
     
     [self addIndexHandler];

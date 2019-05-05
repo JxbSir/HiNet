@@ -18,6 +18,8 @@ UIKIT_EXTERN NSString *const kNetworkTaskList;
 +(instancetype)shared;
 
 - (void)start;
+- (void)startWithPort:(NSUInteger)port;
+- (void)startWithPort:(NSUInteger)port bonjourName:(nullable NSString*)name;
 @end
 
 NS_ASSUME_NONNULL_END
