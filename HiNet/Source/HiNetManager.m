@@ -63,7 +63,7 @@ NSString *const kNetworkTaskList = @"kNetworkTaskList";
     [self addNetworkDataHandler];
     [self addResouceHandler];
     
-    [_server start];
+    [_server startWithPort:port bonjourName:name];
 }
 
 - (void)addNetworkClearHandler {
